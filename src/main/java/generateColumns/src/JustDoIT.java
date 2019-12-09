@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+
 /**
  * @author wangguangle
  * @date 2019/12/6 21:43
@@ -16,10 +18,9 @@ public class JustDoIT {
      *
      * @throws Exception
      */
-    public static void doFiles(String[] files) throws Exception {
-        if (files.length == 0) {
+    public static void doFiles(ArrayList<String> files) throws Exception {
+        if (files.size() == 0) {
             logger.info("--------------------------失败--------------------" +files);
-            System.out.println("--------------------------------------失败---------------------!");
             return;
         }
         int i = 1, count = 0;
@@ -27,10 +28,9 @@ public class JustDoIT {
         String fail = " ";
         for (String file : files) {
             if (file != null && file != "") {
-                logger.info("--------------------第" + i + "次---------------start--------------------");
                 String s = ReadFile.readFileContent(file);
                 GenerateColumns.generating(s, file);
-                logger.info("---------------------第" + i + "次-----------------END----------------------");
+                logger.info("---------------------第" + i + "次-----------------成功----------------------");
                 count += 1;
                 success += i + " / ";
             } else {

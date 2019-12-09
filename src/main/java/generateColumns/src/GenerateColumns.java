@@ -28,18 +28,19 @@ public class GenerateColumns {
             }
             if (str.contains("private") || str.contains("public") || str.contains("protected") || str.contains("@") || str.contains(" * @") || str.contains("*/")) {
 //                logger.info(System.lineSeparator());
-                System.out.println(System.lineSeparator().charAt(0));
+                //打印到控制台
+//                System.out.println(System.lineSeparator().charAt(0));
                 fileWriter.write(System.getProperty("line.separator").getBytes());
             }
 //            if (str.contains("VO") ||str.contains("QC")) {
 //                str = "OutPutVO";
 //            }
 //            logger.info(str.replaceFirst("\n", " ") + " ");
-            System.out.print(str.replaceFirst("\n", " ") + " ");
+//            System.out.print(str.replaceFirst("\n", " ") + " ");
             fileWriter.write((str.replaceFirst("\n", " ") + " ").getBytes());
             if (str.contains(";") || str.contains("{") || str.contains("}")) {
 //                logger.info(System.lineSeparator());
-                System.out.println(System.lineSeparator().charAt(0));
+//                System.out.println(System.lineSeparator().charAt(0));
                 fileWriter.write(System.getProperty("line.separator").getBytes());
             }
         }

@@ -36,7 +36,7 @@ public class ReadFile {
                 }
             }
         }
-        System.out.println("-------------" + sbf.toString());
+//        System.out.println("-------------" + sbf.toString());
         return sbf.toString().replace(";", "; ").replace("{", " { ");
 
     }

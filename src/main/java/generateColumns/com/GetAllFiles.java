@@ -1,4 +1,4 @@
-package generateColumns.src;
+package generateColumns.com;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ public class GetAllFiles {
     public static ArrayList<String> dirAllFail = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
-        String dir = "D:\\project\\generateColumns\\src\\main\\java\\generateColumns/";
+        String dir = "D:\\project\\generateColumns\\com\\main\\java\\generateColumns/";
         File f = new File(dir);
         DirAll(f);
     }

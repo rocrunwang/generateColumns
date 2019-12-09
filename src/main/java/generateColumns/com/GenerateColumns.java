@@ -1,4 +1,4 @@
-package generateColumns.src;
+package generateColumns.com;
 
 
 import org.slf4j.Logger;
@@ -86,7 +86,7 @@ public class GenerateColumns {
     }
 
     static FileOutputStream makeDir(String myFile) throws Exception {
-        String file = "D:\\project\\generateColumns\\src\\main\\java\\generateColumns\\src\\OutPutVO.java";
+        String file = "D:\\project\\generateColumns\\com\\main\\java\\generateColumns\\com\\OutPutVO.java";
         if (myFile == null) {
             myFile = file;
         }
@@ -98,7 +98,7 @@ public class GenerateColumns {
         return fileWriter;
     }
   /*static DataOutputStream getWrite() throws Exception{
-       filePath = new File("./src/main/java/generateColumns/Write.txt");
+       filePath = new File("./com/main/java/generateColumns/Write.txt");
        if(!filePath.exists()) {
            filePath.createNewFile();
        }

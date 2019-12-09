@@ -1,4 +1,4 @@
-package generateColumns.src;
+package generateColumns.com;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,14 +13,15 @@ import java.util.ArrayList;
 @Component
 public class JustDoIT {
     private static final Logger logger = LoggerFactory.getLogger(JustDoIT.class);
+
     /**
      * 多条执行并记录
      *
      * @throws Exception
      */
     public static void doFiles(ArrayList<String> files) throws Exception {
-        if (files.size() == 0) {
-            logger.info("--------------------------失败--------------------" +files);
+        if (files == null || files.size() == 0) {
+            logger.info("--------------------------失败--------------------" + files);
             return;
         }
         int i = 1, count = 0;
@@ -46,7 +47,7 @@ public class JustDoIT {
     public static void doFile(String file) throws Exception {
         System.out.println("-------------------------------------start---------------------!");
         //需要格式的文件地址
-        String oldFile = "D:\\project\\generateColumns\\src\\main\\java\\generateColumns\\src\\OutPutVO.java";
+        String oldFile = "D:\\project\\generateColumns\\com\\main\\java\\generateColumns\\com\\OutPutVO.java";
         if (file == null) {
             file = oldFile;
         }
